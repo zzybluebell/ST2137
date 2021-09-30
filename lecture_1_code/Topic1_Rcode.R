@@ -16,10 +16,11 @@ m[, 2]
 
 t(m)
 
-n = matrix(c(5:8), nrow = 2)
-
+n = matrix(c(5:8), nrow = 2)# column first based
 
 m+n
+
+#m*n 对位置的 相乘
 
 m%*%n
 
@@ -39,7 +40,7 @@ rbind(a,b)
 
 r = rbind(a,b,c(6:9))
 
-r[-3,]
+r[-3,] # delete the 3 row
 
 r[,-2]
 
@@ -47,7 +48,7 @@ r[,-2]
 
 #setwd("C:/Users/")
 
-read.fwf("ex_1_fixed.txt", width=c(2,1,3,3,1))
+read.fwf("Data/ex_1_fixed.txt", width=c(2,1,3,3,1))
 
 
 
@@ -66,15 +67,15 @@ names(df1)[1] = "index"
 
 varnames <- c("Subject", "Gender", "CA1", "CA2", "HW")
 
-data2<-read.table("C:/Users/staptkc/Desktop/ex_1.txt", header = FALSE, col.names = varnames)
+data2<-read.table("Data/ex_1.txt", header = FALSE, col.names = varnames)
 
 data2
 
-data3<-read.table("C:/Users/staptkc/Desktop/ex_1_comma.txt", header = FALSE, sep = ",")
+data3<-read.table("Data/ex_1_comma.txt", header = FALSE, sep = ",")
 
 data3
 
-data3<-read.csv("C:/Users/staptkc/Desktop/ex_1_comma.txt", header = FALSE)
+data3<-read.csv("Data/ex_1_comma.txt", header = FALSE)
 
 
 attach(data3)
@@ -214,7 +215,7 @@ for (j in 1: 6) {
 
 ##############  Redirecting Data:
 
-sink("C:/Data/datasink_ex1.txt")  #directory should be changed accordingly
+sink("Data/datasink_ex1.txt")  #directory should be changed accordingly
 x <- numeric(15)
 for (i in 1:15)
 { s <- 0
@@ -231,7 +232,7 @@ cat("The sum of the first ", i, "numbers = ",x[i], "\n")
 ############  Write data into a file and save that file to computer
 
 
-write.table(data2,"C:/Data/saved_file.txt") 
+write.table(data2,"Data/saved_file.txt") 
 # 'data2' is the set of all the data including columns with header that you want to save
 # a file, 'saved_file.txt' will be created in your computer, under C:/Data
 

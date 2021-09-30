@@ -1,7 +1,7 @@
 # Topic4_Rcode
 
 
-data<- read.csv("C:/Data/midterm_marks")
+data<- read.csv("Data/midterm_marks")
 data<-data.frame(data)
 names(data) = c("obs", "mark")
 #mark<- data[,2]
