@@ -2,7 +2,7 @@
 rm(list=ls())
 
 
-data<- read.table("C:/Data/gasoline.csv",sep= ",", header=TRUE)
+data<- read.table("Data/gasoline.csv",sep= ",", header=TRUE)
 data
 
 attach(data)
@@ -18,15 +18,15 @@ qqline(data$y, col = "red")
 
 hist(data$y, freq = FALSE, main ="Histogram of Gasoline Mileage")
 
+# plot a line 
 x = seq( (min(data$y)- 5), (max(data$y) +5), length.out = length(data$y))
-
 yy <- with(data, dnorm(x, mean(data$y), sd(data$y)))
 lines(x, yy, col = "red")
 
 
 ######  Boxplot:
 
-boxplot(y, xlab = "Gasoline mileage")
+boxplot(y, xlab = "Gasoline mileage") #outliner is in the right (up)
 
 #################  Separate observations by group
 
@@ -46,14 +46,17 @@ range(manual)
 
 data$x11 = factor(x11)
 
-boxplot(data$y ~ x11, xlab = "Type of transmission", ylab = "Gasoline mileage performance" )
+boxplot(data$y ~ x11 , xlab = "Type of transmission", ylab = "Gasoline mileage performance" )
 
 
 
 ######################  Scatter plot
 #gasoline mileage performance vs the overall length
+# x first, y second; pch is the dot whether is solid or hollo
+
 plot(data$x8,data$y, main = "Gasoline Mileage vs Overall Length", xlab = "Overall Length", 
-ylab = "Gasoline Mileage", pch = 20)
+ylab = "Gasoline Mileage", pch = 20, col = "red")
+cor(y, x8)
 
 
 #gasoline mileage performance vs the width:
@@ -65,15 +68,15 @@ ylab = "Gasoline Mileage", pch = 20)
 
 ### y vs weight
 
-
+##xlim and ylim is range
 plot(data$y[which(x11 == 0)]~data$x10[which(x11 == 0)],pch = 20,col="red",xlim=c(1800,5500),ylim=c(10,40), 
 xlab="Weight",ylab="gasoline mileage", main = "Gasoline Data")
 
 par(new=T) #this is to add more scatter plot onto the current plot above
-plot(data$y[which(x11 == 1)]~data$x10[which(x11 == 1)],pch = 2,col="blue", xlim=c(1800,5500),ylim=c(10,40), 
+plot(data$y[which(x11 == 1)]~data$x10[which(x11 == 1)],pch = 10,col="blue", xlim=c(1800,5500),ylim=c(10,40), 
 xlab="",ylab="", main = "")
 par(new=F) #this is to finish adding figure to the current one above
-legend(4500,35,legend=c("Manual", "Auto"),col=c("red", "blue"), pch=c(20,2), cex=1.2)
+legend(4500,35,legend=c("Manual", "Auto"),col=c("red", "blue"), pch=c(20,10), cex=1.2)
 
 
 

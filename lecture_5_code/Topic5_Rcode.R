@@ -3,20 +3,20 @@
 
 winsor<-function(x, alpha = 0.2) 
 { 
-n = length(x)
-xq = n * alpha
-
-x = sort(x)
-
-m = x[(round(xq)+1)]
-
-M = x[(n - round(xq))]
-
-x[which(x<m)] = m
-
-x[which(x>M)] = M
-
-return(c(mean(x),var(x))) 
+  n = length(x)
+  xq = n * alpha
+  
+  x = sort(x)
+  
+  m = x[(round(xq)+1)]
+  
+  M = x[(n - round(xq))]
+  
+  x[which(x<m)] = m
+  
+  x[which(x>M)] = M
+  
+  return(c(mean(x),var(x))) 
 } 
 
 

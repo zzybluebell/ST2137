@@ -1,7 +1,8 @@
 # TOPIC 6
 
+rm(list=ls())
 
-data<-read.csv("C:/Data/bats.csv")
+data<-read.csv("Data/bats.csv")
 count = table(data$type)
 count # frequency table
 

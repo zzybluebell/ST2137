@@ -162,13 +162,6 @@ while (i <= 6) {
 
 
 
-
-
-
-
-
-
-
 ###########  For Loop:
  #To find the sum of first 10 integers:
 S<-0

@@ -1,4 +1,5 @@
 # Tutorial 4
+rm(list=ls())
 
 set.seed(99)
 
@@ -7,7 +8,7 @@ rm(list=ls())
 
 #Q1
 
-data<- read.table("C:/Data/wip.txt",sep= " ", header=TRUE)
+data<- read.table("Data/wip.txt",sep= " ", header=TRUE)
 data
 
 attach(data)
@@ -19,7 +20,7 @@ plant.two = time[plant ==2]
 
 summary(plant.one)
 
-IQR(plant.one)
+IQR(plant.one) # 3rd Qu - 1st Qu
 
 range(plant.one)
 
@@ -61,6 +62,7 @@ boxplot(plant.one, xlab = "Plant One")
 ## plant Two:
 hist(plant.two, freq = FALSE, main ="Histogram of Time of Plant Two")
 xpoint <- seq(0,30,0.05)
+#xpoint <- seq(min(plant.two)  ,max(plant.two),0.05)
 ypoint <- dnorm(xpoint,mean(plant.two),sd(plant.two))
 lines(xpoint,ypoint, col = "red")
 
@@ -69,7 +71,7 @@ boxplot(plant.two, xlab = "Plant Two")
 
 
 ### Histograms and boxplots in one figure:
-par(mfrow=c(2,2))
+par(mfrow=c(2,2)) # figures has 2 row and 2 columns
 
 hist(plant.one, freq = FALSE, main ="Histogram of Time of Plant One")
 xpoint <- seq(0,30,0.05)
@@ -83,7 +85,7 @@ lines(xpoint,ypoint, col = "red")
 
 boxplot(time~plant)
 
-par(mfrow=c(1,1))
+par(mfrow=c(1,1))#change back
 
 
 
@@ -99,11 +101,10 @@ par(mfrow=c(1,1))
 
 #Q2
 
-testscores<- read.table("C:/Data/testscores.txt",sep= " ", header=TRUE)
+testscores<- read.table("Data/testscores.txt",sep= " ", header=TRUE)
 testscores
 
 attach(testscores)
-
 
 ###########  Scatter plot with symbols and legend:
 M = testscores[gender=="M", c(1:2)] #Male
@@ -139,7 +140,7 @@ cor(F$A, F$B) # stronger/larger than cor(M$A, M$B) for males
 #Q3
 
 
-furniture<- read.table("C:/Data/furniture.txt",sep= " ", header=TRUE)
+furniture<- read.table("Data/furniture.txt",sep= " ", header=TRUE)
 furniture
 
 attach(furniture)
@@ -153,20 +154,20 @@ mean(days, trim =0.2)
 
 winsor<-function(x, alpha = 0.2) 
 { 
-n = length(x)
-xq = n * alpha
-
-x = sort(x)
-
-m = x[(round(xq)+1)]
-
-M = x[(n - round(xq))]
-
-x[which(x<m)] = m
-
-x[which(x>M)] = M
-
-return(c(mean(x),var(x)))  #return winsorized mean and variance of winsorized data
+  n = length(x)
+  xq = n * alpha
+  
+  x = sort(x)
+  
+  m = x[(round(xq)+1)]
+  
+  M = x[(n - round(xq))]
+  
+  x[which(x<m)] = m
+  
+  x[which(x>M)] = M
+  
+  return(c(mean(x),var(x)))  #return winsorized mean and variance of winsorized data
 } 
 
 
@@ -189,9 +190,9 @@ mad(days, constant = 1) # this is the same as below
 median(abs(days - median(days)))
 
 mad(days) # note that: mad(days)/mad(days, constant = 1) = 1.4826
+# this can be used to estimate population sd if population is normal
 
-
-IQR(days)/1.35 # this is a robust estimate of sigma
+IQR(days)/1.35 # this is a robust estimate of sigma if population is normal
 
 #comment: the sd(days) is much larger than the estimation by MAD, and it is 
 #also smaller than the estimation by IQR/1.35. This suggests: there could be a 

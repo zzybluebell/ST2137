@@ -1,13 +1,13 @@
 
 # Tutorial 1 R code and Solution
 
-rm(list= ls())
+rm(list= ls()) 
 
 ################ Q1
 #Q1a
-data = read.csv("final_marks")
+data = read.csv("Data/final_marks")
 
-names(data)[1] = 'ID'
+names(data)[1] = 'ID' # names(data) is vector
 names(data)[2] = 'mark'
 
 attach(data)
@@ -24,21 +24,21 @@ mark
 
 #Q1c
 summaries = function(x){
-ave = mean(x)
-Q1 = quantile(x)[2]
-Q2 = median(x)
-Q3 = quantile(x)[4]
-variance = var(x)
-std = sd(x)
-range = c(min(x), max(x))
-return(c(ave, Q1, Q2,Q3,variance, std, range))
+  ave = mean(x)
+  Q1 = quantile(x)[2]
+  Q2 = median(x)
+  Q3 = quantile(x)[4]
+  variance = var(x)
+  std = sd(x)
+  range = c(min(x), max(x))
+  return(c(ave, Q1, Q2,Q3,variance, std, range)) 
 }
 summaries(mark)
 
 #Q1d
-length(which(mark>=40)) #21
-
-#Q1e
+length(which(mark>=40)) #21 which is position
+ 
+#Q1ebind
 which(mark ==max(mark))
 length(which(mark ==max(mark)))
 
@@ -66,7 +66,7 @@ beta.hat
 x <- numeric(30)
 x[1] <- 0
 x[2] <- 1
-
+x
 for(i in 3:30){ 
   x[i] <- 2*x[i-1] - x[i-2] 
 }
@@ -82,19 +82,19 @@ sum(x[1:20]) #190
 
 moments <- function(x){
 
-s <- numeric(4)
-
-n <- length(x)
-
-s[1] <- mean(x)
-
-s[2] <- mean((x-s[1])^2)
-
-s[3] <- mean((x-s[1])^3)
-
-s[4] <- mean((x-s[1])^4)
-
-return(s)
+  s <- numeric(4)
+  
+  n <- length(x)
+  
+  s[1] <- mean(x) #xbar
+  
+  s[2] <- mean((x-s[1])^2) # 2nd moment
+  
+  s[3] <- mean((x-s[1])^3) #3rd moment
+  
+  s[4] <- mean((x-s[1])^4) #4th moment
+  
+  return(s)
 
 }
 
