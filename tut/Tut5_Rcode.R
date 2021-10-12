@@ -1,8 +1,8 @@
  ###   TUTORIAL 5
-rm(list=ls())
+
 
 # Q1
-student = read.csv("Data/student.txt", sep = ",", header = TRUE)
+student = read.csv("C:/Data/student.txt", sep = ",", header = TRUE)
 
 student
 
@@ -42,8 +42,7 @@ OR<-function(x, pad.zeros = FALSE, conf.level=0.95){
   ASE<-sqrt(sum(1/x))
   CI<-exp(log(theta) +c(-1,1)*qnorm(0.5*(1+conf.level))*ASE)
   list(estimator=theta, ASE=ASE,conf.interval=CI, 
-       conf.level=conf.level) 
-}
+       conf.level=conf.level) }
 
 
 OR(tab)
