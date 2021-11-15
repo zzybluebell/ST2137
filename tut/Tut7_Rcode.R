@@ -5,11 +5,13 @@ set.seed(99)
 #Q1
 
 
-data<-read.table("/Data/midterm_marks", sep = ",", header = TRUE)
-
+data<-read.table("Data/midterm_marks", sep = ",", header = TRUE)
+data
 mark = data[,2]
+mean(mark)
+sd(mark)
 
-mu0 = 20
+mu0 = 20 ## if the mean score is 20 or less than 20; H0 miu = 2
 
 #test statistic: 
 t = (mean(mark - mu0))/sqrt(var(mark)/length(mark)) 
@@ -35,12 +37,12 @@ CI # 16.0294 18.9706
 
 # built-in function to test:
 
-t.test(mark)# test if mean of mark equal 0 or not
+t.test(mark)# test if mean of mark equal 0 or not assume compraing in zero
 
-t.test(mark, mu = mu0,alternative = "two.sided") #also produces the CI for population mean
+t.test(mark, mu = mu0, alternative = "two.sided") #also produces the CI for population mean
 
 
-t.test(mark, mu = mu0,alternative = "less")
+t.test(mark, mu = mu0,alternative = "less") 
 
 t.test(mark, mu = mu0,alternative = "greater")
 
@@ -63,10 +65,10 @@ qqline(mark,datax = TRUE)
 # not normal, the result of this test above is still reliable, since 
 # this test is robust the the normaility assumption.
 
-
+shapiro.test(mark)
 
 #Q2
-data<-read.table("C:\\Users\\staptkc\\Desktop\\ST2137\\glaucoma_dep.csv", sep = ",", header = TRUE)
+data<-read.table("Data/glaucoma_dep.csv", sep = ",", header = TRUE)
 
 data
 
@@ -74,7 +76,8 @@ attach(data)
 
 #Q1a
 
-shapiro.test(diff)
+shapiro.test(diff) #do not reject, 
+#cant determine is normal distribution, 所以可以try 用t test
 
 t.test(diff, mu = 0,alternative = "less")
 
@@ -84,8 +87,8 @@ t.test(diff, mu = 0,alternative = "less")
 
 #Q1b
 var.test(glaucoma,unaffected) # variances are equal since p-value = 0.8 is large.
-
-t.test(glaucoma,unaffected, mu = 0, var.equal = TRUE, alternative = "less") 
+## p value = 0.8215 nearly to 1, so glaucoma,unaffected 
+## have same equal variance
 
 # p-value = 0.3417 > 0.05. Do not reject Ho. conclude: no evidence to show 
 #that glaucoma decreases the corneal's thickness.
