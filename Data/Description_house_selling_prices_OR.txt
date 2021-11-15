@@ -1,0 +1,11 @@
+# House.Price: original price in dollar
+# HP.in.thousands: price in thousand dollars 
+# House.Size: house size in square feet
+# Acres: size of the whole lot of land including the house (acres)
+# Lot.Size: size of the whole lot (squarefeet)
+# Bedrooms: number of bedrooms
+# T.Bath: number of bathrooms. (0.5 means bathroom without toilet) 
+# Age: house's age (years) 
+# Garage: 1 = yes, 0 = no 
+# Condition: 0 = good; 1 = not good
+# Age.Category: O = old; M = medium; N= new; VO = very old.

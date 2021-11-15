@@ -5,7 +5,7 @@ set.seed(99)
 #Q1
 
 
-data<-read.table("C:\\Users\\staptkc\\Desktop\\ST2137\\midterm_marks", sep = ",", header = TRUE)
+data<-read.table("/Data/midterm_marks", sep = ",", header = TRUE)
 
 mark = data[,2]
 
