@@ -1,0 +1,90 @@
+,Country,Year,Status,Life_expectancy,Adult_mortality,infant_deaths,Alcohol
+2,Afghanistan,2014,Developing,59.9,271,64,0.01
+16,Albania,2014,Developing,77.5,8,0,4.51
+31,Algeria,2014,Developing,75.4,11,21,0.01
+46,Angola,2014,Developing,51.7,348,67,8.33
+61,Antigua and Barbuda,2014,Developing,76.2,131,0,8.56
+76,Argentina,2014,Developing,76.2,118,8,7.93
+91,Armenia,2014,Developing,74.6,12,1,3.91
+106,Australia,2014,Developed,82.7,6,1,9.71
+121,Austria,2014,Developed,81.4,66,0,12.32
+136,Azerbaijan,2014,Developing,72.5,119,5,0.01
+151,Bahamas,2014,Developing,75.4,16,0,9.45
+166,Bahrain,2014,Developing,76.8,7,0,1.57
+181,Bangladesh,2014,Developing,71.4,132,98,0.01
+196,Barbados,2014,Developing,75.4,1,0,8.82
+211,Belarus,2014,Developing,72,199,0,13.94
+226,Belgium,2014,Developed,89,76,0,12.6
+241,Belize,2014,Developing,70,177,0,6.58
+256,Benin,2014,Developing,59.7,252,25,0.01
+271,Bhutan,2014,Developing,69.4,216,0,0.01
+286,Bolivia (Plurinational State of),2014,Developing,74,189,8,3.62
+301,Bosnia and Herzegovina,2014,Developing,77.2,89,0,4.03
+316,Botswana,2014,Developing,65.1,268,2,0.01
+331,Brazil,2014,Developing,74.8,144,44,7.32
+346,Brunei Darussalam,2014,Developing,77.6,8,0,0.01
+361,Bulgaria,2014,Developed,74.3,138,1,12.03
+376,Burkina Faso,2014,Developing,59.3,268,39,0.01
+391,Burundi,2014,Developing,59.1,297,22,0.01
+406,Côte dIvoire,2014,Developing,52.8,47,58,0.01
+414,Cabo Verde,2014,Developing,73,117,0,0.01
+429,Cambodia,2014,Developing,68.3,179,11,0.01
+444,Cameroon,2014,Developing,56.7,366,47,0.01
+459,Canada,2014,Developing,82,65,2,8.1
+474,Central African Republic,2014,Developing,58,437,15,0.01
+489,Chad,2014,Developing,52.6,362,46,0.01
+504,Chile,2014,Developing,83,83,2,7.16
+519,China,2014,Developing,75.8,86,171,5.78
+534,Colombia,2014,Developing,74.6,144,11,4.38
+549,Comoros,2014,Developing,63.2,23,1,0.01
+564,Congo,2014,Developing,64.2,275,7,0.01
+580,Costa Rica,2014,Developing,79.5,96,1,3.45
+595,Croatia,2014,Developed,77.8,97,0,12.14
+610,Cuba,2014,Developing,79,93,1,4.37
+625,Cyprus,2014,Developed,83,53,0,0.01
+640,Czechia,2014,Developed,78.6,88,0,12.68
+655,Democratic Peoples Republic of Korea,2014,Developing,73,142,6,0.01
+663,Democratic Republic of the Congo,2014,Developing,59.3,266,237,0.01
+678,Denmark,2014,Developed,84,73,0,9.64
+693,Djibouti,2014,Developing,63,252,1,0.38
+709,Dominican Republic,2014,Developing,73.6,154,6,5.92
+724,Ecuador,2014,Developing,76,121,6,3.82
+739,Egypt,2014,Developing,78,161,53,0.21
+754,El Salvador,2014,Developing,73.3,181,2,2.52
+769,Equatorial Guinea,2014,Developing,57.9,32,3,0.01
+784,Eritrea,2014,Developing,64.4,261,5,0.01
+799,Estonia,2014,Developing,77.3,122,0,0.01
+814,Ethiopia,2014,Developing,64.2,234,140,0.01
+829,Fiji,2014,Developing,69.7,19,0,0.01
+844,Finland,2014,Developing,89,78,0,8.8
+859,France,2014,Developing,82.2,79,3,11.5
+874,Gabon,2014,Developing,65.5,237,2,0.01
+889,Gambia,2014,Developing,68,266,3,0.01
+904,Georgia,2014,Developing,74.5,125,1,6.13
+919,Germany,2014,Developed,89,69,2,11.03
+934,Ghana,2014,Developing,62.1,253,37,0.01
+949,Greece,2014,Developing,88,73,0,7.53
+964,Grenada,2014,Developing,73.5,143,0,8.42
+979,Guatemala,2014,Developing,71.7,187,10,1.88
+994,Guinea,2014,Developing,58.1,299,27,0.01
+1009,Guinea-Bissau,2014,Developing,58.4,282,4,0.01
+1024,Guyana,2014,Developing,66,217,0,7.64
+1039,Haiti,2014,Developing,63.1,245,14,0.01
+1054,Honduras,2014,Developing,74.5,149,3,2.87
+1069,Hungary,2014,Developed,75.6,137,0,0.01
+1084,Iceland,2014,Developed,82.5,49,0,7.45
+1099,India,2014,Developing,68,184,957,3.07
+1114,Indonesia,2014,Developing,68.9,179,119,0.09
+1129,Iran (Islamic Republic of),2014,Developing,75.4,83,19,0.01
+1144,Iraq,2014,Developing,67.9,199,32,0.01
+1159,Ireland,2014,Developed,81.2,66,0,10.75
+1174,Israel,2014,Developing,82.2,6,1,2.62
+1189,Italy,2014,Developed,82.5,57,2,7.56
+1204,Jamaica,2014,Developing,75.8,133,1,3.83
+1219,Japan,2014,Developed,83.5,57,2,0.01
+1234,Jordan,2014,Developing,74,113,4,0.41
+1249,Kazakhstan,2014,Developing,69.9,22,5,6.29
+1264,Kenya,2014,Developing,62.9,255,56,0.01
+1279,Kiribati,2014,Developing,66.1,2,0,0.01
+1294,Kuwait,2014,Developing,74.6,82,0,0.01
+1309,Kyrgyzstan,2014,Developing,78,17,3,0.01
