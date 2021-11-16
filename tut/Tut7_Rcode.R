@@ -90,6 +90,9 @@ var.test(glaucoma,unaffected) # variances are equal since p-value = 0.8 is large
 ## p value = 0.8215 nearly to 1, so glaucoma,unaffected 
 ## have same equal variance
 
+
+t.test(glaucoma,unaffected, mu = 0, var.equal = TRUE, alternative = "less") 
+
 # p-value = 0.3417 > 0.05. Do not reject Ho. conclude: no evidence to show 
 #that glaucoma decreases the corneal's thickness.
 #the conclusion is different, since the samples (glaucoma and unaffected are treated as independent.

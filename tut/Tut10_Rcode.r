@@ -6,7 +6,7 @@ set.seed(999)
 
 rm(list = ls())
 
-data = read.csv("C:/Data/batfail.txt", sep = "", header = TRUE)
+data = read.csv("Data/batfail.txt", sep = "", header = TRUE)
 data
 
 attach(data)
@@ -30,7 +30,7 @@ rm(list=ls())
 set.seed(999)
 
 
-data<-read.table('C:/Data/crab.txt', header=T)
+data<-read.table('Data/crab.txt', header=T)
 
 names(data)
 

@@ -1,8 +1,8 @@
 ########  Q1
-setwd("C:/Users/staptkc/Desktop/ST2137")
+
 rm(list = ls())
 
-data = read.csv("flextime.txt", sep = "", header = TRUE)
+data = read.csv("Data/flextime.txt", sep = "", header = TRUE)
 
 attach(data)
 

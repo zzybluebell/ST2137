@@ -4,7 +4,7 @@
 
 rm(list = ls())
 
-data = read.csv("C:/Data/weeklies.txt", sep = ",", header = TRUE)
+data = read.csv("Data/weeklies.txt", sep = ",", header = TRUE)
 
 attach(data)
 data
@@ -75,7 +75,7 @@ CI
 
 rm(list=ls())
 
-data = read.table("C:/Data/machine.txt", sep = "", header = TRUE)
+data = read.table("Data/machine.txt", sep = "", header = TRUE)
 
 data
 
@@ -127,7 +127,7 @@ shapiro.test(new)
 
 rm(list= ls())
 
-data = read.table("C:/Data/wip.txt", header = TRUE)
+data = read.table("Data/wip.txt", header = TRUE)
 
 data
 
@@ -138,15 +138,12 @@ plant.one = time[plant==1]
 
 plant.two = time[plant ==2]
 
-#these are 2 independent samples.
+#these are 2 independent samples. for nonparametric test
 #Wilcoxon rank sum test to determine if there is a difference between the processing times of the two plants.
 
-wilcox.test(plant.one,plant.two)
+wilcox.test(plant.one, plant.two, alternative = "two.sided")
 
 #There is not very strong evidence to show that the processing times for the two plants are different
 # since the two sided p-value is not very small (0.0834).
-
-
-
 
 
