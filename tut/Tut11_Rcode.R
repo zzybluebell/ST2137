@@ -8,17 +8,17 @@ set.seed(999)
 
 lambda = 5000  
 
-f = function(lambda = 5000,n,N){
+f = function(lambda=5000,n,N) {
 
-ave = numeric(N)
-
-for (i in 1:N){ 
-
-x = rexp(n, rate = 1/lambda)
-
-ave[i] = mean(x)
-}
-return(ave)
+  ave = numeric(N)# N 个 zero
+  
+    for (i in 1:N){ 
+    
+      x = rexp(n, rate = 1/lambda)
+      
+      ave[i] = mean(x)
+    }
+  return(ave)
 }
 
 
@@ -26,7 +26,7 @@ return(ave)
 ave = f(n = 30, N = 100); ave
 s = sd(ave); s
 # by CLT, if n is large, this sd(ave) should be close to lambda/sqrt(n)
-
+  
 
 # (b)
 hist(ave); #OR more advanced as below
@@ -51,7 +51,7 @@ c( min(ave),max(ave))
 mean(ave) + 3*sd(ave) # this should be the end of the right tail
 
 mean(ave) - 3*sd(ave) # this should be the end of the left tail
-
+ 
 #the interval of mean +- 3sd should cover 99.9% of data
 
 c(mean(ave) - 2*sd(ave), mean(ave) + 2*sd(ave)) # 2 sd from the mean

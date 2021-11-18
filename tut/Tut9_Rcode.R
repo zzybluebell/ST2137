@@ -29,7 +29,7 @@ V.neg = sum( rank(d)[which(diff<0)]) # this is the sum of all negative ranks = s
 ########  Q2 (b)
 rm(list = ls())
 
-data = read.csv("gasoline.csv", sep = ",", header = TRUE)
+data = read.csv("Data/gasoline.csv", sep = ",", header = TRUE)
 
 attach(data)
 
@@ -81,7 +81,7 @@ t.test(manual, auto, mu = 0, var.equal = FALSE, conf.level = 0.99, alternative =
 
 rm(list = ls())
 
-data = read.csv("locate.txt", sep = "", header = TRUE)
+data = read.csv("Data/locate.txt", sep = "", header = TRUE)
 data
 
 attach(data)
